@@ -55,6 +55,10 @@
       margin-bottom: 10px;
       background-color: white;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+      /* Mobilde sütunlar taşarsa kayan bir tablo olsun */
+      overflow-x: auto;
+      display: table; /* Tarayıcı zaten tablo olarak yorumlayacak, ama net olsun diye yazıldı */
     }
 
     table th,
@@ -71,7 +75,8 @@
       font-weight: bold;
     }
 
-    /* Küçük ekranlarda yatay kaydırma */
+    /* 600px altı ekranlar için, tablo yapısını bozacak satırları BURADAN SİLİN ya da yorum satırına alın */
+    /*
     @media (max-width: 600px) {
       table,
       thead,
@@ -80,9 +85,6 @@
       td,
       tr {
         display: block;
-      }
-      table {
-        overflow-x: auto;
       }
       th,
       td {
@@ -99,12 +101,12 @@
         text-align: left;
         font-weight: bold;
       }
-      /* Her sütun başlığı için önek ekle (mobile görünümde okunaklılık için) */
       td:nth-of-type(1)::before { content: attr(data-label-1); }
       td:nth-of-type(2)::before { content: attr(data-label-2); }
       td:nth-of-type(3)::before { content: attr(data-label-3); }
       td:nth-of-type(4)::before { content: attr(data-label-4); }
     }
+    */
 
     /* ------------------------------
        ALT BİLGİ (FOOTER) STİLİ
@@ -240,4 +242,3 @@
   </footer>
 </body>
 </html>
-
